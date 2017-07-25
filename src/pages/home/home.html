@@ -1,0 +1,13 @@
+<ion-header no-shadow>
+  <ion-navbar>
+    <ion-title>Bollywoo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <div class='valign'>
+    <ion-searchbar (click)="startApp()" placeholder='Search for a movie...'></ion-searchbar>
+    <p>Or</p>
+    <button ion-button color="light"(click)="goToMovie()"><ion-icon name="film"></ion-icon>  Pick one for me</button>
+  </div>
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-list>
+    <ion-card ion-item (click)="openItem(movie)" *ngFor="let movie of movieListFiltered">
+      <img [src]="movie.profilePic"/>
+      <div class="card-title">{{movie.title}}</div>
+    </ion-card>
+  </ion-list>
+</ion-content>

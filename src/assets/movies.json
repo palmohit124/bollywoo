@@ -1,0 +1,46 @@
+{
+  "data":[
+    {
+      "title": "Dangal",
+      "profilePic": "../../assets/img/movies/dangal.jpg",
+      "cast": ["Amir Khan"],
+      "description": "After his failure at winning a gold medal for the country, Mahavir Phogat, despite societal pressures, vows to realize his dreams by training his daughters for the Commonwealth Games."
+    },
+    {
+      "title": "Dilwale",
+      "profilePic": "../../assets/img/movies/dilwale.jpg",
+      "cast": ["Shahrukh Khan"],
+      "description": "Raj falls hopelessly in love with Meera, but they have to part ways due to their families' rivalry. Fifteen years later, they are destined to meet again when their respective siblings fall in love."
+    },
+    {
+      "title": "Jagga Jasus",
+      "profilePic": "../../assets/img/movies/jagga.jpg",
+      "cast": ["Ranbir Kapoor"],
+      "description": "Jagga, a gifted teenage detective, embarks on a quest to find her missing father with help from a female companion."
+    },
+    {
+      "title": "3 Idiots",
+      "profilePic": "../../assets/img/movies/3idiots.jpg",
+      "cast": ["Amir Khan"],
+      "description": "In college, Farhan and Raju form a great bond with Rancho due to his refreshing outlook. Years later, a bet gives them a chance to look for their long-lost friend whose existence seems rather elusive."
+    },
+    {
+      "title": "PK",
+      "profilePic": "../../assets/img/movies/pk.jpg",
+      "cast": ["Amir Khan"],
+      "description": "An alien on Earth loses the only device he can use to communicate with his spaceship. His innocent nature and child-like questions force the country to evaluate the impact of religion on its people."
+    },
+    {
+      "title": "Ghajini",
+      "profilePic": "../../assets/img/movies/ghajani.jpg",
+      "cast": ["Amir Khan"],
+      "description": "Hit by an iron rod, a tycoon suffers from a condition that prevents him from remembering anything beyond fifteen minutes. With notes tattooed on his body, he sets out to find his fiancee's killer."
+    },
+    {
+      "title": "Taare Zameen Par",
+      "profilePic": "../../assets/img/movies/tzp.jpg",
+      "cast": ["Amir Khan"],
+      "description": "Day-dreamer Ishaan just can't seem to get anything right in his boarding school. Soon, an unconventional new art teacher, Ram Shankar Nikumbh, helps the dyslexic student discover his true identity."
+    }
+  ]
+}

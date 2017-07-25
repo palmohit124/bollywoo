@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Select an actor</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-list>
+    <button ion-item (click)="openItem(actor)" *ngFor="let actor of actorsListFiltered">
+      <ion-avatar item-start>
+        <img [src]="actor.profilePic" />
+      </ion-avatar>
+      <h2>{{actor.name}}</h2>
+    </button>
+  </ion-list>
+</ion-content>

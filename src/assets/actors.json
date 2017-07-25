@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "name": "Shahrukh Khan",
+      "profilePic": "../../assets/img/actors/srk.jpg"
+    },
+    {
+      "name": "Salman Khan",
+      "profilePic": "../../assets/img/actors/salman.jpg"
+    },
+    {
+      "name": "Amir Khan",
+      "profilePic": "../../assets/img/actors/amir.jpg"
+    },
+    {
+      "name": "Ranbir Kapoor",
+      "profilePic": "../../assets/img/actors/ranbir.jpg"
+    }
+  ]
+}
