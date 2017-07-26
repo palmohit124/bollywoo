@@ -6,11 +6,12 @@
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Search for a movie}"></ion-searchbar>
+  <ion-list *ngIf="!errorMessage">
     <ion-card ion-item (click)="openItem(movie)" *ngFor="let movie of movieListFiltered">
       <img [src]="movie.profilePic"/>
       <div class="card-title">{{movie.title}}</div>
     </ion-card>
   </ion-list>
+  <p *ngIf='errorMessage' class='error'>{{errorMessage}}</p>
 </ion-content>

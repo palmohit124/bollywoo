@@ -11,14 +11,14 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
 
-  startApp() {
+  redirectToMovies() {
     this.navCtrl.push(SearchPage), {}, {
       animate: true,
       direction: 'forward'
     };
   }
 
-  goToMovie() {
+  redirectToActors() {
     this.navCtrl.push(ActorsPage), {}, {
       animate: true,
       direction: 'forward'

@@ -14,14 +14,21 @@ export class ActorsPage {
   currentItems: any = [];
   actorsList: any = [];
   actorsListFiltered: any = [];
+  errorMessage: String = '';
 
   constructor(public navCtrl: NavController, public movies: Movies) { }
 
   ionViewDidLoad() {
-    this.movies.getActors().subscribe(data => {
-        this.actorsList = data.data;
-        this.actorsListFiltered = data.data;
-    });
+    this.movies.getActors()
+      .subscribe(
+        data => {
+          this.actorsList = data.data;
+          this.actorsListFiltered = data.data;
+        },
+        err => {
+          this.errorMessage = 'The actors list could not be retrieved.'
+        }
+      );
   }
 
   openItem(item) {
@@ -31,7 +38,7 @@ export class ActorsPage {
     });
   }
 
-  getItems(ev: any) {
+  getActors(ev: any) {
     this.actorsListFiltered = JSON.parse(JSON.stringify(this.actorsList))
     let val = ev.target.value;
 

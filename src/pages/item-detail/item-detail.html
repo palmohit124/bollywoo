@@ -1,18 +1,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ displayedMovie.title }}</ion-title>
+    <ion-title>{{ errorMessage ? 'Movie Details' : displayedMovie.title }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + displayedMovie.profilePic + ')'">
-  </div>
+  <div *ngIf="!errorMessage">
+    <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + displayedMovie.profilePic + ')'">
+    </div>
 
-  <div class="item-detail" padding>
-    <h2>{{displayedMovie.title}}</h2>
-    <p>{{displayedMovie.description}}</p>
+    <div class="item-detail" padding>
+      <h2>{{displayedMovie.title}}</h2>
+      <p>{{displayedMovie.description}}</p>
+    </div>
   </div>
+  <p *ngIf='errorMessage' class='error'>{{errorMessage}}</p>
 </ion-content>

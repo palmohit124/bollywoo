@@ -13,14 +13,21 @@ export class SearchPage {
   currentItems: any = [];
   movieList: any = [];
   movieListFiltered: any = [];
+  errorMessage: String;
 
   constructor(public navCtrl: NavController, public movies: Movies) { }
 
   ionViewDidLoad() {
-    this.movies.getMovies().subscribe(data => {
-        this.movieList = data.data;
-        this.movieListFiltered = data.data;
-    });
+    this.movies.getMovies()
+      .subscribe(
+        data => {
+          this.movieList = data.data;
+          this.movieListFiltered = data.data;
+        },
+        err => {
+          this.errorMessage='The list of movies could not be retrieved.'
+        }
+      );
   }
 
   openItem(item) {

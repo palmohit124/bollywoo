@@ -6,8 +6,8 @@
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
-  <ion-list>
+  <ion-searchbar (ionInput)="getActors($event)" placeholder="Search for an actor"></ion-searchbar>
+  <ion-list *ngIf='!errorMessage'>
     <button ion-item (click)="openItem(actor)" *ngFor="let actor of actorsListFiltered">
       <ion-avatar item-start>
         <img [src]="actor.profilePic" />
@@ -15,4 +15,5 @@
       <h2>{{actor.name}}</h2>
     </button>
   </ion-list>
+  <p *ngIf='errorMessage' class='error'>{{errorMessage}}</p>
 </ion-content>
