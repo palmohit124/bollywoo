@@ -1,12 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Search</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Look for a movie
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-searchbar (ionInput)="getItems($event)" placeholder="Search for a movie}"></ion-searchbar>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Search for a movie"></ion-searchbar>
   <ion-list *ngIf="!errorMessage">
     <ion-card ion-item (click)="openItem(movie)" *ngFor="let movie of movieListFiltered">
       <img [src]="movie.profilePic"/>

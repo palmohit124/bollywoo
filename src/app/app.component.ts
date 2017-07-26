@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav, Config } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -7,38 +8,30 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FirstRunPage } from '../pages/pages';
 import { SearchPage } from '../pages/search/search';
 import { HomePage } from '../pages/home/home';
+import { ActorsPage } from '../pages/actors/actors';
 
-import { TranslateService } from '@ngx-translate/core'
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Pages</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
+  templateUrl: "app.html"
 })
 export class MyApp {
   rootPage = FirstRunPage;
+  activePage: any;
 
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
+    {title: 'Home', component: HomePage},
+    {title: 'Movies', component: SearchPage},
+    {title: 'Actors', component: ActorsPage}
   ]
 
-  constructor(private translate: TranslateService, private platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
+  constructor(private translate: TranslateService, private platform: Platform,
+    private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen,
+    public menu: MenuController) {
     this.initTranslate();
+    this.activePage = this.pages[0];
   }
 
   ionViewDidLoad() {
@@ -62,7 +55,15 @@ export class MyApp {
     });
   }
 
+  closeMenu() {
+    this.menu.close()
+  }
+
   openPage(page) {
     this.nav.setRoot(page.component);
+  }
+
+  checkActive(page) {
+    return page == this.activePage
   }
 }

@@ -1,9 +1,13 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Select an actor</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Select an actor
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
-
 
 <ion-content>
   <ion-searchbar (ionInput)="getActors($event)" placeholder="Search for an actor"></ion-searchbar>
