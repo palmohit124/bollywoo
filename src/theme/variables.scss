@@ -39,6 +39,10 @@ $colors: (
   text-align: center;
 }
 
+ion-searchbar {
+  background-color: map-get($colors, white);
+}
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

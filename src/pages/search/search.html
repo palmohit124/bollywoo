@@ -15,7 +15,7 @@
   <ion-list *ngIf="!errorMessage">
     <ion-card ion-item (click)="openItem(movie)" *ngFor="let movie of movieListFiltered">
       <img [src]="movie.profilePic"/>
-      <div class="card-title">{{movie.title}}</div>
+      <div class="card-title" class="list-items">{{movie.title}}</div>
     </ion-card>
   </ion-list>
   <p *ngIf='errorMessage' class='error'>{{errorMessage}}</p>
