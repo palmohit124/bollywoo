@@ -18,3 +18,24 @@
 ion-icon {
   margin: 0 1rem
 }
+
+.close-button {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-color: map-get($colors, danger);
+  color: map-get($colors, white);
+}
+
+.close-icon {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.center-button {
+  text-align: center;
+}
+
+.activeHighlight {
+  background-color: map-get($colors, light);
+}
