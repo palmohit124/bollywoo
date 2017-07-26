@@ -67,8 +67,4 @@ export class MyApp {
   checkActive(page) {
     return page == this.activePage
   }
-
-  checkActive(page) {
-    return page == this.activePage
-  }
 }
