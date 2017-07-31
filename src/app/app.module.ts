@@ -12,6 +12,7 @@ import { ActorsPage } from '../pages/actors/actors';
 
 import { Api } from '../providers/api';
 import { Movies } from '../providers/movies';
+import { ModelData } from '../providers/modelDataProvider';
 
 import { Camera } from '@ionic-native/camera';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -59,6 +60,7 @@ export function HttpLoaderFactory(http: Http) {
   providers: [
     Api,
     Movies,
+    ModelData,
     Camera,
     GoogleMaps,
     SplashScreen,

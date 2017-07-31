@@ -14,7 +14,7 @@
   <ion-searchbar (ionInput)="getItems($event)" placeholder="Search for a movie"></ion-searchbar>
   <ion-list *ngIf="!errorMessage">
     <ion-card ion-item (click)="openItem(movie)" *ngFor="let movie of movieListFiltered">
-      <img [src]="movie.profilePic"/>
+      <img [src]="movie.coverPic"/>
       <div class="card-title" class="list-items">{{movie.title}}</div>
     </ion-card>
   </ion-list>
