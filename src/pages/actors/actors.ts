@@ -23,7 +23,6 @@ export class ActorsPage {
     this.actorsList = this.modelData.getActorsModel();
 
     if(this.actorsList) {
-      this.actorsList = this.modelData.getActorsModel();
       this.actorsListFiltered = JSON.parse(JSON.stringify(this.actorsList));
     } else {
       this.movies.getActors()

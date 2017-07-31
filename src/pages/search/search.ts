@@ -22,7 +22,6 @@ export class SearchPage {
     this.movieList = this.modelData.getMoviesModel();
 
     if(this.movieList) {
-      this.movieList = this.modelData.getMoviesModel();
       this.movieListFiltered = JSON.parse(JSON.stringify(this.movieList));
     } else {
       this.movies.getMovies()
